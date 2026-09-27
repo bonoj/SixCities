@@ -1,250 +1,192 @@
 # Six Cities — Semantic Surface
 
-## What this artifact is
+## What Six Cities Is
 
-Six Cities is a standalone browser-resident Three.js civilization experiment. It asks whether six functionally different city-machines can participate in one shared physical world strongly enough that their combinations produce behavior that was not individually storyboarded.
+Six Cities is a miniature civilization simulation built to investigate whether independently meaningful capabilities can compose through shared physical and logistical truths strongly enough to produce behavior that was not individually storyboarded.
 
-The executable is the authority for present capability. This document interprets the meaning earned by that executable: its shared truths, ownership boundaries, capabilities, useful failures, and limits. Historical comments embedded in `index.html` preserve how those meanings were discovered.
+It is one world, not six isolated demonstrations. Terrain, matter, support, transport, storage, processing, collection, and launch consequences are shared state. The six cities participate through capabilities whose effects remain available to the rest of the civilization.
 
-This realization was generated independently from a frozen semantic contract and perceptual reference evidence, without access to the predecessor Foundry implementation. Similar mechanisms are therefore not recovered implementation lineage; they are evidence of what survived semantic transmission.
+This realization was generated independently from frozen laboratory apparatus, semantic intent, and perceptual reference evidence. It did not inherit the predecessor Foundry implementation. Similarities are evidence of semantic transmission; differences and newly discovered mechanisms are evidence produced by regeneration.
 
-## The governing idea
+The executable is the authority for present capability. This surface records the meaning and boundaries that the expedition earned.
 
-There is **one civilization in one world**, not six isolated demonstrations.
+## The World Owns Shared Truth
 
-The six cities are differentiated by verbs rather than by a shared chassis with interchangeable machinery. Their forms, interfaces, storage, and behavior are consequences of what each city currently does. Shared civilization identity comes afterward through material and construction language.
+Composition became possible when capabilities stopped owning private versions of the world.
 
-The observer is primarily an investigator. The useful interactions perturb real state: move a city, interrupt infrastructure, alter terrain, isolate a route, change support, or watch supply and backpressure propagate. The world should remain causally active without requiring the observer to trigger six canned demos.
+Shared phenomena have shared owners:
 
-## Authorities
+- **Terrain** owns mutable substrate, support, and realization of deformation. Actors may cause excavation; they do not privately rewrite terrain truth.
+- **Matter** owns conserved quantity, composition, consequential provenance, stage, location, and current ownership or containment.
+- **Physics** owns gravitational settling and support consequences unless a capability explicitly supplies another physical cause such as powered flight or transport.
+- **The transport graph** owns network connectivity and route truth. Cities expose interfaces into it.
+- **Capabilities** own their local verbs, state, admission rules, and transformations.
+- **The observer** may perturb the world, but an intervention enters the same causal state as autonomous behavior rather than selecting a canned outcome.
 
-### Terrain owns substrate truth
+A city does not need special knowledge of another named city when shared world truth can mediate their relationship.
 
-`terrain` owns a mutable sampled heightfield, support, and extraction. Excavation changes the rendered and collidable substrate. Removed terrain becomes quantified material; it does not replenish itself, and a lower bedrock bound exists.
+## Capability Is Not Entitlement
 
-Actors may cause or request deformation. They do not privately own the resulting terrain truth.
+One of the expedition's strongest corrections was withdrawing the generic-city abstraction.
 
-### Matter owns conserved material truth
+Early implementations silently granted every city storage, capacity, and freight connectivity because it was a city. Inspection showed that those properties were false. Drone City had no reason to become a warehouse. Thumper exposed matter directly into the world and had not earned storage. Link mediated transport but did not need ordinary inventory.
 
-`world.lots` owns exposed, contained, carried, routed, and ballistic matter.
+**Identity does not confer capability. Capability must be earned by behavior.**
 
-A lot carries:
+**Cityhood is morphology and identity, not an interface.**
 
-- exact quantities of four mineral/aggregate constituents;
-- processing stage;
-- meaningful location or owner;
-- origin witnesses.
+| Capability | What it owns | What it does not own |
+| --- | --- | --- |
+| **Launcher** | supply commitment, physical aiming, ballistic delivery | demand ontology, combat, arbitrary material creation |
+| **Drone** | claims, world-space collection, carried cargo | generic storage, ring freight, destination-specific scripts |
+| **Unzip** | civilization intake, separation of real material distinctions | global allocation policy, invented resource classes |
+| **Thumper** | the cause and local act of excavation | terrain truth, warehouse inventory, ring freight |
+| **Reservoir** | bounded storage, composition retention, buffering | material creation, mandatory upstream supply |
+| **Link** | freight mediation and inter-city allocation | ordinary warehouse inventory, endpoint processing |
 
-Splitting partitions quantity. Combining sums it. Separation preserves it. Productive cooldowns do not create matter.
+The useful abstraction is therefore not a universal City interface. It is a set of explicit capabilities meeting through shared truths.
 
-Initial inventory plus extracted terrain accounts for all extant material. Runtime conservation auditing is part of the apparatus; a conservation failure stops execution visibly.
+## Matter Is the Continuity Layer
 
-Origin witnesses are sets, not an exact per-origin mass ledger. Constituent quantities are exact.
+The civilization becomes coherent because one capability acts on the same matter another capability produced.
 
-### Physics owns support and gravity
+Authoritative lots carry exact quantity across four constituents, processing stage, meaningful location or owner, and origin witnesses where provenance matters. Splitting partitions quantity. Combination sums it. Separation preserves it. Extraction introduces quantified matter from finite terrain. No productive cooldown manufactures supply.
 
-Loose lots, launched loads, and whole cities are subject to shared gravity where that consequence matters.
+The causal chain can therefore remain continuous across:
 
-Cities are atomic supported bodies at the simulation level. Support is sampled from terrain; cities may settle when that support changes. They do not currently tilt, fracture, or simulate district-scale structural mechanics.
+**terrain → exposed matter → drone cargo → Unzip intake → separated stock → Link freight → Reservoir or Launcher → ballistic delivery → recoverable world matter**
 
-Powered drone flight and ring transport explicitly provide lift rather than silently opting out of gravity.
+The implementation deliberately separates two layers:
 
-### The world owns the transport graph
+**Authoritative matter state** answers what exists, how much exists, what consequential identity it has, and where or by whom it is meaningfully held.
 
-Cities expose capabilities and interfaces. They do not own private pairwise knowledge of other named cities.
+**Presentation** answers how that truth is made legible at miniature scale.
 
-Ring freight is hub-mediated. Every inter-city ring-freight journey passes through Link City. Dijkstra resolves currently available paths, but endpoints do not create direct peer-to-peer conduits.
+Beads, streams, packets, cargo extent, and Reservoir strata are witnesses of authoritative matter. They are not required to be one rendered rigid body per semantic unit.
 
-Terrain clearance, endpoint power, interface availability, link state, capacity, and compatible material stage can affect whether transport is possible.
+## Network Access Is Not Peer Knowledge
 
-In-flight material is not permitted to teleport when topology changes. It attempts physical recovery through an available adjacent interface; where that is impossible, existing spill/fall behavior remains the consequence.
+The first freight topology allowed processing and storage endpoints to connect directly. That made Link an optional shortcut and weakened the meaning of the network.
 
-### The observer owns investigation
+The correction was structural: freight endpoints expose access to a network, while Link owns mediation. Inter-city ring freight is hub-mediated. Endpoints do not acquire pairwise knowledge merely because both participate in transport.
 
-Camera, pause/speed, selection, relocation, and investigation interventions belong to the observer layer.
+**A freight interface grants network access, not permission to create arbitrary peer relationships.**
 
-Selection does not move the camera. Relocation moves the container and its contents, thereby changing actual spatial reach and route availability. Undercutting terrain is actual extraction and therefore tests support rather than playing an animation.
+Link also owns the civilization's present allocation policy. Launcher receives first claim on usable processed material. Reservoir receives overflow and can return stored material through Link when Launcher again has room. This is deliberate priority, not a generalized fairness scheduler.
 
-## The six capabilities
+Mediation became meaningful when bypass disappeared.
 
-### Launcher
+## Backpressure Is World State
 
-Launcher consumes usable processed material and commits a conserved 75-unit packed payload to a ballistic delivery.
+Waiting is often evidence.
 
-Numerical aim and physical actuation are separate. The rotating accelerator must yaw and pitch into alignment before firing, and the visible muzzle is the launch origin. Projectile-only temporal scaling changes traversal time while preserving the accepted spatial parabola.
+A full or unavailable intake leaves loaded drones holding real cargo. An occupied half-duplex conduit can make opposing freight wait at an interface. Isolating Link halts ring freight. A full Reservoir changes upstream possibilities. A depleted Launcher waits for supply.
 
-Launches currently occur at an irregular autonomous cadence when sufficient material is available. The cadence is presentation rhythm, not evidence of intelligent demand scheduling.
+The expedition also discovered that truthful backpressure can be damaged by overgeneralization. Treating future drone arrivals as aggregate reservations synchronized independent actors and produced swarm-wide blocking. Destination choice and admission were separated: a drone may commit to a destination, arrive physically, and then be admitted against the receiver's current state when room becomes available.
 
-Landed cargo becomes recoverable raw material with its original constituent quantities. This is not combat and is not a disguised resource sink.
+**Failure to proceed is not automatically an exception path. It can be the visible consequence that makes shared state legible.**
 
-The three reclamation grounds remain experimental scaffolding. The artifact has **not** earned a deep civilization-level reason for ballistic delivery.
+## Physical Causality Includes Actuation
 
-### Drone City
+Numerically knowing an outcome is not the same as physically performing it.
 
-Drone City maintains twenty-four collectors.
+Launcher exposed this distinction clearly. The ballistic solver determines a desired firing solution, but the visible accelerator must yaw and pitch through bounded motion before a shot can occur. The muzzle is the launch origin. Projectile motion follows the accepted spatial parabola.
 
-Collectors claim exposed world matter, approach it, physically carry authoritative cargo, deliver that cargo through the civilization's earned intake, and return home before beginning another work cycle.
+The final specimen autonomously commits deliveries irregularly when sufficient supply is available. Its cadence is presentation rhythm, not evidence of an intelligent demand model.
 
-Collection is authorized by ownership plus meaningful local proximity. Exact mathematical docking against a presentation witness is not required.
+The expedition therefore preserves an important boundary:
 
-Destination and admission are distinct. A loaded drone can travel toward the correct intake even when that intake cannot yet accept its cargo; capacity governs unloading rather than whether the drone departs. Waiting drones are admitted locally and sequentially rather than reserving aggregate future capacity and accidentally synchronizing the swarm.
+**A solved intention may still require a physical mechanism to realize it.**
 
-Drone City is **not** a ring-freight endpoint and owns no generic authoritative material buffer merely because it is a city.
+## Representation May Cheat; Causality May Not
 
-### Unzip
+Six Cities deliberately compresses semantic scale.
 
-Unzip is the civilization's explicit intake for newly collected world material.
+A city is an atomic simulation entity while its architecture implies districts, industry, and population. A material packet can represent a large transfer. Reservoir strata can witness stored composition without becoming granular rigid-body physics. Tiny structures imply urban density without simulating citizens.
 
-Ground → drone → Unzip is the current collection boundary. Drones do not bypass it by selecting some other city merely because that city has spare capacity.
+These are not failures of fidelity. They are the representation strategy that makes the civilization legible at miniature scale.
 
-Unzip separates raw mixed lots into single-constituent sorted lots. Four architectural output witnesses make that classification legible.
+The governing rule is:
 
-Its processing and forwarding cadence has deliberately been tuned so that Unzip expresses processing without becoming the governor of the entire civilization's rhythm. That tuning does not change conservation or material identity.
+**Representation may compress, sample, aggregate, or imply state. It may not falsify consequential causality.**
 
-### Thumper
+A disconnected route cannot continue delivering decorative cargo. A visually full Reservoir cannot be authoritatively empty. Carried matter must remain owned during transport. Excavation must change the substrate that support queries actually use.
 
-Thumper excavates mutable terrain.
+Spend discrete spatial resolution where multiplicity itself matters. Compress it where multiplicity is only a presentation burden.
 
-Its supported swept arm and reciprocating head act at the same world location as the terrain cut. Excavation therefore changes world substrate rather than incrementing a private resource counter.
+## Observer Authority
 
-Available exposed stock regulates work. Reach, bedrock, and accumulated loose material can stop productive excavation.
+The observer is an investigator rather than an omnipotent RTS commander.
 
-Thumper's output exists directly as exposed world-space matter. Thumper owns neither generic city storage nor a ring-freight interface.
+Camera movement, inspection, interruption, relocation, isolation, undercutting, speed control, and other experimental interventions are useful because they alter real conditions and allow consequences to propagate through the same systems used by autonomous activity.
 
-### Reservoir
+Selection does not secretly move the world. Relocation changes spatial reach. Undercutting removes actual terrain. Broken transport must recover, wait, reroute where valid, or spill according to current state.
 
-Reservoir owns bounded material storage and packaging behavior.
+**An intervention changes conditions; the runtime owns the consequence.**
 
-It retains exact constituent amounts and origin witnesses. Its visible fill is a **persistent spatial witness** of inventory history rather than a frame-by-frame repacking. Incoming composition accretes as strata inside the hemispherical containment envelope; withdrawals peel compatible visible history from the newest side.
+## What the Expedition Had to Unlearn
 
-That spatial history is presentation, not a claim of granular rigid-body accessibility.
+The most valuable archaeology is not a release log. It records attractive abstractions that executable evidence proved false.
 
-Internal sorted-to-packed processing may change packaging without visually shuffling unchanged composition. Mixed recoverable loads preserve their constituent truth; packaging does not homogenize matter away.
+**Generic cityhood → storage and connectivity.**  
+False. Storage and freight participation are independent capabilities earned by function.
 
-Reservoir is overflow in the current allocation grammar, not a mandatory upstream supplier.
+**Direct endpoint freight → useful Link City.**  
+False. If every endpoint can bypass the hub, Link is decorative. Required mediation established its actual semantic authority.
 
-### Link City
+**Nearest available receiver → coherent collection.**  
+False. Newly collected world matter needed an explicit civilization intake. Drones now deliver it through Unzip rather than treating any spare buffer as equivalent.
 
-Link is required transit infrastructure and the owner of current inter-city allocation policy.
+**Aggregate future reservations → safe capacity.**  
+False. They synchronized the swarm. Local sequential admission preserves both capacity truth and independent actors.
 
-A freight interface grants access to the network; it does not grant peer-to-peer routing. Link therefore mediates every ring-freight journey between processing/storage endpoints.
+**Exact navigation completion → valid collection.**  
+False. Exposed matter is an aggregated spatial witness, not a precision docking socket. Exclusive claim plus meaningful local proximity is the earned pickup condition.
 
-Link owns no ordinary warehouse inventory. Cargo may wait at its interface while traversing a route without becoming Link stock.
+**Frame-derived fill → truthful storage presentation.**  
+False. Although inventory was correct, global visual repacking made unchanged stored matter appear to churn. Reservoir presentation now preserves bounded spatial history.
 
-Current allocation is deliberate priority rather than fairness: Launcher has first claim on usable processed material; Reservoir receives overflow when Launcher cannot accept more. Stored Reservoir material may re-enter Link allocation when Launcher has headroom.
+**Mechanically closed circulation → earned civilization purpose.**  
+False. Launcher experiments showed that a coherent supply loop does not establish a deep reason for civilization-level launch. Physical aiming and delivery are earned; the external demand model remains deliberately provisional.
 
-Isolating Link partitions the ring logistics layer. That is the point of the capability, not an error to route around with hidden endpoint links.
+**Mechanical closure is not semantic justification.**
 
-## Matter and representation
+## What Six Cities Does Not Claim
 
-Authoritative matter and visible matter are deliberately different layers.
+Six Cities does not claim:
 
-The simulation must answer what exists, how much exists, what materially consequential composition it has, where it meaningfully is, and what owns it. Presentation answers how that state remains legible at miniature scale.
+- a complete economy or deeply earned external demand model;
+- civilian population simulation or strategic city planning;
+- universal rigid-body or one-particle-per-unit matter;
+- generalized congestion, fairness, or reservation infrastructure;
+- hydrology, ecology, tree collision, or erosion simulation;
+- a universal construction grammar;
+- full obstacle pathfinding for drones;
+- exact per-origin mass accounting beyond the provenance witnesses the experiment requires;
+- that every successful mechanism should become reusable framework infrastructure.
 
-A rendered bead is a sample of an authoritative lot, not an independent rigid body and not a promise of one bead per unit. Matter may appear as packets, streams, cargo, sampled beads, or persistent fill without changing the authoritative ledger.
+Terrain deformation, gravity-owned loose matter, containment failure, accumulation, and deeper physical-material consequence remain rich questions. The expedition explicitly leaves them to a different specimen rather than generalizing this civilization merely for completeness.
 
-Transported lots remain conserved packets. Their visible matter stretches along route geometry, becoming spatially extended near mid-route and compact near interfaces. This makes distance legible without changing authoritative packet timing.
+## How to Extend It
 
-Once that extent became visible, opposing packets passing through one another became a physical contradiction. Conduits therefore earned a minimal half-duplex rule: an occupied conduit temporarily admits only the current direction; same-direction followers require headway; opposing packets wait. Occupancy is traffic, not topology failure, and it does not trigger congestion-aware rerouting.
+Start from a world truth or an earned capability boundary.
 
-The implementation deliberately spends discrete spatial resolution where multiplicity matters instead of asserting universal particle-level simulation.
+Ask who owns the new meaning. Reuse existing terrain, matter, transport, support, and capability semantics only where their current authority genuinely applies. Transfer ownership rather than changing unrelated counters. Declare compatibility and capacity where material crosses a boundary. Add a new world truth explicitly when the existing world does not contain it.
 
-## Cityhood is not capability
+Do not grant behavior because an abstraction makes it convenient.
 
-One of the most important corrections in the expedition was withdrawing the generic-city abstraction.
+Do not promote a mechanism into architecture merely because it worked once.
 
-Being a city does **not** automatically confer:
+Let executable evidence decide whether a new concept deserves semantic identity.
 
-- storage;
-- material ownership;
-- ring-freight connectivity;
-- processing;
-- network routing.
+## Expedition Status
 
-Those are independent capabilities earned by behavior.
+This specimen is complete for its present research purpose.
 
-The earlier generic abstraction produced semantically false state: Drone City accumulated purposeless raw inventory, Thumper advertised storage despite depositing into world space, Link looked like a warehouse despite functioning as transit infrastructure, and direct endpoint routes made Link decorative.
+Further work should not rationalize its economy, generalize its machinery, or cosmetically erase useful scars merely because extension remains possible. The expedition stops because the artifact has finished teaching the questions it was built to expose.
 
-The current topology is intentionally asymmetric because the verbs are asymmetric.
+The progression that matters is:
 
-## Perceptual grammar
+**six named cities → six capabilities → explicit interfaces → shared world truths → emergent composition**
 
-The cities share a civilization without sharing a canonical chassis.
-
-Primary morphology is verb-derived: directional Launcher massing, porous Drone fabrication/bays, branching Unzip flow, heavy Thumper machinery, hollow Reservoir containment, and sparse Link relay structure.
-
-Brass, stone, selected glass, repeated octagonal forms, rectilinear urban density, and strong hierarchy unify those divergent forms.
-
-This miniature architecture implies districts, internal industry, and population at a larger semantic scale than the simulation explicitly models. Greeble does not establish an ecosystem, civilian population, internal building economy, or hidden capability.
-
-Static architecture may be merged and repeated detail instanced. Representation is free to optimize aggressively so long as required causal truth remains recoverable.
-
-## High-value failures
-
-Several failures materially changed the model of the civilization.
-
-**Direct endpoint freight made Link decorative.**  
-Requiring all inter-city freight to traverse Link established the distinction between network access and routing authority.
-
-**Generic cityhood invented capabilities.**  
-Removing automatic storage and freight interfaces from Drone City, Thumper, and Link made ownership match actual verbs.
-
-**Nearest-compatible-buffer delivery bypassed the processing story.**  
-Giving Unzip an explicit intake capability established a boundary between world collection and civilization logistics.
-
-**Destination was confused with admission.**  
-Filtering destinations by immediate capacity stranded loaded drones at pickup sites. Drones now travel toward the earned destination and let admission resolve at the intake.
-
-**Aggregate reservations synchronized independent drones.**  
-Treating every inbound drone as reserved future capacity produced clumped release behavior. Local sequential admission restored independent actors.
-
-**Compact packet witnesses hid distance and contradictory traffic.**  
-Elastic route extent exposed opposing packets passing through each other, which earned half-duplex conduit occupancy.
-
-**Reservoir repacking erased spatial history.**  
-A persistent bounded fill witness preserved storage history without falsely promoting presentation into authoritative granular physics.
-
-**Faster Launcher kinetics did not create meaningful purpose.**  
-Ballistic timing and physical aiming earned improvements; the deeper reason for launch did not. The artifact preserves that unresolved boundary instead of rationalizing it after the fact.
-
-## Explicit boundaries
-
-Six Cities does not currently claim:
-
-- a complete economy;
-- an earned external demand model;
-- strategic city planning;
-- civilian or ecosystem simulation;
-- exact per-origin mass accounting;
-- general rigid-body contact;
-- granular Reservoir physics;
-- full drone obstacle pathfinding;
-- fluid dynamics, hydrology, erosion, or tree collision;
-- structural fracture or district-level city physics;
-- persistent save state.
-
-Water, vegetation, forests, and decorative rocks may contribute perceptual world identity without becoming collectible or simulated systems.
-
-The current Launcher cadence should not be mistaken for intelligent demand. Reclamation grounds remain provisional scaffolding.
-
-Terrain deformation, gravity-owned loose matter, containment failure, accumulation, and persistent physical consequence remain stronger open questions than further rationalization of the civilization's economy. The completed expedition explicitly points those questions toward independent physical-material/deformation work rather than silently broadening this specimen.
-
-## Extension rule
-
-Extend Six Cities by adding capabilities that compose through existing world truths, or by explicitly introducing a new world truth.
-
-A new material consumer should declare compatibility and capacity. A new terrain cause should act through terrain authority. A new vehicle should transfer ownership rather than mutate counters. A genuine new transformation should be represented in conservation auditing.
-
-Do not infer capability from geometry, labels, cityhood, or implementation convenience.
-
-Prefer reuse of shared semantic owners over named pairwise choreography.
-
-## Archaeology and completion
-
-The executable intentionally carries its own archaeology: the frozen S2 semantic source, collaborative turn records, failed probes, present-tense corrections, and expedition-close evidence.
-
-Those records are not all current truth. Their value is that they preserve the path by which current truth was earned.
-
-The expedition is complete for its present research purpose. Completion does not mean that the world cannot be extended. It means further work should not rationalize its economy, generalize its machinery, or erase useful scars merely because more implementation is possible.
-
-The artifact has finished teaching the questions this expedition was built to expose.
+Six Cities began with six nouns. It became coherent by discovering that the nouns mattered less than the boundaries between their verbs and the shared truths through which those verbs compose.
