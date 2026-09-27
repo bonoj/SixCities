@@ -1,7 +1,7 @@
 name: FUUTP assemble
 on:
-  push:
-    branches: [main]
+  issues:
+    types: [opened]
 permissions:
   contents: write
 jobs:
