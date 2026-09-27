@@ -1,0 +1,26 @@
+name: FUUTP assemble
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble and verify
+        shell: bash
+        run: |
+          cat .fuutp/part-* > index.html
+          test "$(git hash-object index.html)" = "2fc171f82f0726372d61c9f7d8994779a117a8d5"
+      - name: Promote and clean carriers
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git rm -r .fuutp
+          git rm .github/workflows/fuutp-assemble.yml
+          git commit -m "Publish standalone Six Cities artifact"
+          git push
