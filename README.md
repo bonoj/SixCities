@@ -1,5 +1,7 @@
 # Six Cities
 
+![Six Cities reference landscape](SIX_CITIES_REFERENCE.png)
+
 A miniature civilization simulation about six independently meaningful capabilities composing through shared terrain, matter, logistics, and physical consequence.
 
 Six Cities is one continuous Three.js world rather than six scripted demonstrations. Matter is extracted from terrain, collected, separated, routed, buffered, allocated, and launched while remaining causally continuous across the civilization. The cities differ by function and morphology, but meet through shared world truths instead of pairwise choreography.
@@ -21,6 +23,12 @@ Start with the running artifact.
 Then read **[SEMANTIC_SURFACE.md](SEMANTIC_SURFACE.md)** for the current conceptual model: ownership boundaries, earned capabilities, material and network semantics, important failed abstractions, explicit non-claims, and the experiment's stopping condition.
 
 The executable governs present capability. The Semantic Surface interprets what that capability means. Git history preserves how the experiment got there.
+
+## Reference evidence
+
+![Six Cities morphology reference](SIX_CITIES_MORPHOLOGY_REFERENCE.png)
+
+The morphology board was perceptual and semantic reference evidence for the independent realization: six differentiated functional forms, one civilization language, visible transport grammar, and materially distinct flows. It is evidence used to transmit intent, not an inherited implementation blueprint.
 
 ## Status
 
